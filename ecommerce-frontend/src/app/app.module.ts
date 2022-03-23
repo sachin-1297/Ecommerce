@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MatSliderModule } from '@angular/material/slider';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -15,7 +14,6 @@ import { SideNavComponent } from './side-nav/side-nav.component';
 import { LoginComponent } from './login/login.component';
 import { CartComponent } from './cart/cart.component';
 import { ContactComponent } from './contact/contact.component';
-import { AboutComponent } from './about/about.component';
 import { SignupComponent } from './signup/signup.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatDialogModule} from '@angular/material/dialog';
@@ -41,13 +39,11 @@ import {MatTableModule} from '@angular/material/table';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     ToolbarComponent,
     SideNavComponent,
     LoginComponent,
     CartComponent,
     ContactComponent,
-    AboutComponent,
     SignupComponent,
     FooterComponent,
     PaymentGatewayComponent,

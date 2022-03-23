@@ -33,7 +33,7 @@ adminlogin({ username, password }: any): Observable<any> {
   return throwError(new Error('Failed to login'));
 }
 addProduct(product_data:any){
-  return this.http.post('http://localhost:8081/add',product_data)
+  return this.http.post('http://localhost:8081/product/add',product_data)
 }
 updateProduct(product_data:any){
   return this.http.put("http://localhost:8081/update",product_data)
