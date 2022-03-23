@@ -1,0 +1,50 @@
+<mat-toolbar>
+  <div class="container">
+    <div class="row"  >
+      <div class="col-1">
+    <button mat-icon-button class="example-icon-menu" aria-label="Example icon-button with menu icon" *ngIf="isLoggedIn ">
+      <mat-icon>account_circle</mat-icon>
+      <span class="name">{{userName}}</span>
+      <mat-select  >
+        <mat-option><button mat-icon-button>MyAccount</button></mat-option>
+        <mat-option><button mat-icon-button>Edit Profile</button></mat-option>
+        <mat-option><button mat-icon-button (click) ="logout()">Logout</button></mat-option>
+      </mat-select>
+    </button>
+    <button mat-icon-button class="example-icon-shop" aria-label="Example icon-button with shop icon" routerLink="home" routerLinkActive="active">
+      <mat-icon>SHOP</mat-icon>
+    </button>
+  </div>
+  <div class="col-11">
+    <form class="example-form">
+        <mat-form-field class="search-box">
+          <mat-label>Search</mat-label>
+          <input matInput placeholder="search">
+        </mat-form-field>
+        <button mat-icon-button class="example-icon-search" aria-label="Example icon-button with search icon">
+          <mat-icon>search</mat-icon>
+          </button>
+    </form> 
+  </div>  
+  <div class="col-5">
+    <button mat-stroked-button class="example-icon-cart" aria-label="Example icon-button with cart icon"  routerLink="cart" routerLinkActive="active" *ngIf="isLoggedIn " >
+      
+      <mat-icon>shopping_cart</mat-icon>
+      <a>Cart</a>
+    </button>
+    <button mat-stroked-button  (click)="openDialog()" class="example-icon-login" aria-label="Example icon-button with login icon" matTooltip="Sign-in" *ngIf="!isLoggedIn ">
+      <a>Sign-in</a>
+    </button>
+    <button  mat-stroked-button (click)="openDialogs()" class="example-icon-contact" aria-label="Example icon-button with contact icon">
+      <a>Contact Us</a>
+    </button>
+    <button  mat-stroked-button class="example-icon-aboutus" aria-label="Example icon-button with about icon" routerLink="about" routerLinkActive="active">
+      <a>About Us</a>
+    </button>
+  </div>
+ 
+</div>
+</div>
+  
+</mat-toolbar>
+  

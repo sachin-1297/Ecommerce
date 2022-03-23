@@ -1,0 +1,26 @@
+.mat-card {
+    background: #fff;
+    color: rgba(0,0,0,.87);
+ 
+    height: 430px;
+
+}
+.mat-form-field{
+    margin-left: 280px;
+    top:-335px
+}
+.mat-card-image {
+    width: calc(100% + -210px);
+    margin: 0 -16px 16px -16px;
+    height: 350px;
+}
+.mat-stroked-button {
+    margin: 0 8px;
+    left: 337px;
+    top: -340px;
+}
+.mat-card-header .mat-card-title {
+    margin-bottom: 12px;
+    text-align: center;
+    margin-left: 130px;
+}

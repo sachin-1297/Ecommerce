@@ -1,0 +1,50 @@
+<ng-container >
+    <div class="container">
+        <div class="card-table">
+            <div class="cart-product">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <th>S No.</th>
+                            <th>category</th>
+                            <th>name</th>
+                            <th>id</th>
+                            <th>price</th>
+                            <th>description</th>
+                            <th>imageUrl</th>
+
+                            <th>Action</th>
+                            <th><button mat-icon-button color="warn" (click)="openDialog()"><mat-icon>add_circle</mat-icon></button></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let items of products">
+                            <td>{{items.index}}</td>
+                            <td>{{items.category}}</td>
+                            <td>{{items.name}}</td>
+                            <td>{{items.id}}</td>
+                            <td>{{items.price}}</td>
+                            <td matTooltip="{{items.description}}" matTooltipPosition="right">{{items.description}}</td>
+                            <td><img style="width: 120px;" src="{{items.imageUrl}}"alt=""></td>
+                         
+                            <td>
+
+                                <button mat-icon-button  color="warn" class="dlt" ><mat-icon>delete_forever</mat-icon></button>
+                                <button mat-icon-button class="primary" color="primary" class="edt"> <mat-icon>edit</mat-icon></button>
+                                
+                            </td>
+                        </tr>
+                        <tr >
+                            <td colspan="1">
+                                <button mat-raised-button  color="warn">Logout</button>
+                            </td>
+                            
+                       
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</ng-container>
+

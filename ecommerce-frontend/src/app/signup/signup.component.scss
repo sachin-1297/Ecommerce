@@ -1,0 +1,186 @@
+
+.mat-card {
+    background: #fff;
+    background-size: cover;
+    color: rgba(0,0,0,.87);
+ 
+
+}
+.example-card{
+    background-size: cover;
+     
+}
+// .mat-form-field{
+//     margin-left: 280px;
+//     top:-335px
+// }
+// .mat-card-image {
+//     background: url("/assets/images/bgg.jpg");
+// }
+// .mat-stroked-button {
+//     margin: 0 8px;
+//     left: 337px;
+//     top: -329px;
+// }
+// .mat-card-header .mat-card-title {
+//     margin-bottom: 12px;
+//     text-align: center;
+//     margin-left: 130px;
+// }
+
+// .txt1{
+//     margin-right: -3px;
+//     margin-left: 249px;
+ 
+// }
+// .text-center{
+//     margin-top: -340px;
+// }
+.one{
+    margin-left: 5px;
+}
+.two{
+    margin-left: 5px;
+}
+.three{
+    margin-left: 5px;
+}
+.four{
+    margin-left: 5px;
+}
+.five{
+    margin-left: 5px;
+}
+.six{
+    margin-left: 5px;
+}
+.seven{
+    margin-left: 140px;
+ }
+ .eight{
+    margin-left: 5px;
+ }
+ .nine{
+    margin-left: 206px;
+ }
+ .ten{
+    margin-left: 160px;
+ }
+ .eleven{
+    margin-left: 160px;
+ }
+ .mat-card-header .mat-card-title {
+    margin-bottom: 12px;
+    margin-left: 171px;
+ }
+
+.mat-card-actions {
+    margin-left: 185px;
+}
+.cont{
+    width: 100%;
+    margin-left: -30px;
+   
+}
+.mat-toolbar {
+    background: #7fe5ff;
+    color: rgb(255, 255, 255);
+}
+.txt{
+    margin-left: 43%;
+}
+.th{
+    margin-top: -61px;
+    margin-left: 44px;
+}
+    
+// <mat-card-content style = "margin-top:50px;">
+// <mat-stepper [linear]="isLinear" #stepper>
+//   <mat-step [stepControl]="signupForm">
+//     <form name="form" [formGroup]="signupForm">
+//       <ng-template matStepLabel style = "margin-top:10px;">Fill out your name</ng-template>
+//       <div class = "one">
+//         <mat-form-field appearance="fill"  style="width:500px;">
+//           <mat-label>Name</mat-label>
+//           <input matInput formControlName="username" required #Name>
+//         </mat-form-field>
+//       </div>
+//       <div class = "two">
+//         <mat-form-field appearance="fill"  style="width:500px;">
+//           <mat-label>Enter your email</mat-label>
+//           <input matInput placeholder="pat@example.com" formControlName="email" required>
+//           <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+//         </mat-form-field>
+//       </div>
+//       <div class = "three">
+//        <mat-form-field appearance="fill" style="width:500px;">
+//          <mat-label>phone</mat-label>
+//          <input matInput placeholder="number" formControlName="phone" required>
+//        </mat-form-field>
+//       </div>
+//       <div class = "four">
+//        <mat-form-field appearance="fill" style="width:500px;">
+//          <mat-label>Set Your Password</mat-label>
+//          <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+//          <mat-error *ngIf="password.invalid">{{getErrorMsg()}}</mat-error>
+//          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+//          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+//          </button>
+//        </mat-form-field>
+//       </div>
+//       <div>
+//         <button mat-button matStepperNext>Next</button>
+//       </div>
+//     </form>
+//     <div class ="th">
+//      <button mat-stroked-button class="example-icon-signin" aria-label="Example icon-button with signin icon" (click)="openDialog()">
+//        <a>Back to Sign-in</a>
+//      </button>
+//     </div>
+//   </mat-step>
+//   <mat-step [stepControl]="signupForm" label="Fill out your address">
+//     <form [formGroup]="signupForm">
+//       <div class ="five">
+//         <mat-form-field appearance="fill" style="width:500px;">
+//           <mat-label>Address</mat-label>
+//           <input matInput formControlName="address" placeholder="Ex. 1 Main St, New York, NY" required>
+//         </mat-form-field>
+//       </div>
+//       <div class = "six">
+//          <mat-form-field appearance="fill" style="width:500px;">
+//            <mat-label>pin</mat-label>
+//            <input matInput formControlName ="pin">
+//          </mat-form-field>
+//       </div>
+//       <div class = "eight">
+//         <mat-form-field appearance="fill" style="width:500px;">
+//           <mat-label>Choose a date</mat-label>
+//           <input matInput [matDatepicker]="picker" formControlName="dob">
+//           <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle >
+//           <mat-datepicker #picker></mat-datepicker>
+//         </mat-form-field>
+//       </div>
+//       <div>
+//         <button mat-button matStepperPrevious>Back</button>
+//         <button mat-button matStepperNext>Next</button>
+//       </div>
+//     </form>
+//   </mat-step>
+//   <mat-step [stepControl]="signupForm">
+//     <form [formGroup]="signupForm" (ngSubmit)= "signup()">
+//       <ng-template matStepLabel>Signup</ng-template>
+//       <p>You are now done.</p>
+//       <mat-card-actions>
+//         <div class ="tw">
+//           <button mat-stroked-button mat-dialog-close (click)="signup()" class="example-icon-signin" aria-label="Example icon-button with signin icon">
+//             <a>Sign-Up</a>
+//           </button>
+//         </div>
+//       </mat-card-actions>
+//       <div>
+//         <button mat-button matStepperPrevious>Back</button>
+//         <button mat-button (click)="stepper.reset()">Reset</button>
+//       </div>
+//     </form>
+//   </mat-step>
+// </mat-stepper>

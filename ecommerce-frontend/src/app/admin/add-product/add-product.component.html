@@ -1,0 +1,43 @@
+<mat-card>
+    <mat-card-title>Enter the detail of Products :</mat-card-title>
+    <form [formGroup]="addProduct" >
+        <div class = "one">
+            <mat-form-field appearance="fill" style="width:300px;">
+            <mat-label>Product_name</mat-label>
+            <input matInput formControlName="name" required #Name>
+            </mat-form-field>
+        </div>
+        <div class = "two">
+            <mat-form-field appearance="fill" style="width:300px;" >
+            <mat-label>Product_id</mat-label>
+            <input matInput formControlName="id" required >
+            </mat-form-field>
+        </div>
+        <div class = "three">
+            <mat-form-field appearance="fill"  style="width:300px;">
+            <mat-label>Product_category</mat-label>
+            <input matInput formControlName="category" required >
+            </mat-form-field>
+        </div>
+        <div class = "four">
+            <mat-form-field appearance="fill" style="width:300px;" >
+            <mat-label>Product_price</mat-label>
+            <input matInput formControlName="price" required >
+            </mat-form-field>
+        </div>
+        <div class = "five">
+            <mat-form-field appearance="fill" style="width:300px;"  >
+            <mat-label>Product_description</mat-label>
+            <textarea matInput formControlName="description"></textarea>
+            </mat-form-field>
+        </div>
+        <div class="six">
+            <img [src]="url" height ="50"><br>
+            <input type="file" (change)="onselectFile($event)"formControlName="imageUrl">
+        </div>
+        <div class="seven">
+          <button mat-raised-button mat-dialog-close color="primary" mat-list-item class="btn" (click)="add()">Add</button><br>
+        </div>
+    </form>
+</mat-card>
+

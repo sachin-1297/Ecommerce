@@ -1,0 +1,76 @@
+// .mat-toolbar { 
+ 
+//   }
+  .example-icon-shop {
+    padding-bottom : 49px;
+    left:85px;
+    }
+  .example-icon-cart{
+    padding-bottom : 4px;
+   left: 90% ;
+  }
+  .example-icon-login{
+    padding-bottom : 4px;
+    left: 79%;
+  }    
+   
+  .example-icon-search{
+    padding-bottom : 35px;
+    line-height: 42px;
+    left: 45%;
+  }
+  .search-box{
+    left: 250px;
+    width: 50%
+  }
+  .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 50%;
+  
+  }
+  .example-icon-contact{
+    left:66.7%;
+    padding-bottom : 4px;
+  }
+  .example-icon-aboutus{
+    left:55%;
+    padding-bottom : 4px;
+  }
+ .mat-select-arrow{
+   padding-left: 1px;
+    margin-bottom: -40px;
+  }
+
+  .example-icon-menu{
+    margin-left: -14px;
+  }
+  .mat-select{
+    width: 61%;
+  }
+  .rounded-circle{
+    margin-bottom: 2px;
+  }
+  .col-1 {
+    flex: 1 0 auto;
+    width: 8.33333333%;
+    margin-left: -27px;
+    margin-top: 27px;
+}
+.col-11 {
+  flex: 0 0 auto;
+  width: 91.66666667%;
+  margin-top: 17px;
+}
+.col-5 {
+  flex: 0 0 auto;
+  width: 0.666667%;
+  margin-top: -68px;
+  margin-left: 1080px;
+}
+.sticky{
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  z-index: 10;
+}
