@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import {AuthService} from '../../services/auth.service';
+import { AdminService } from '../services/admin.service';
 
 @Component({
   selector: 'app-add-product',
@@ -12,7 +12,7 @@ export class AddProductComponent implements OnInit {
   addProduct:FormGroup;
   url= "/assets/images/";
 
-  constructor(private auth:AuthService) { }
+  constructor(private adminSerivce:AdminService) { }
 
   ngOnInit(): void {
     this.addProduct = new FormGroup({
@@ -26,7 +26,7 @@ export class AddProductComponent implements OnInit {
   }
 
   add(){
-    this.auth.addProduct(this.addProduct.value).subscribe((res)=>{
+    this.adminSerivce.addProduct(this.addProduct.value).subscribe((res)=>{
       console.log(res) 
     });
   }

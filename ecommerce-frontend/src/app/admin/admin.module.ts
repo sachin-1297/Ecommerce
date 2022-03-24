@@ -16,6 +16,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { AddProductComponent } from './add-product/add-product.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { AdminService } from './services/admin.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -39,10 +41,11 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatTableModule,
     MatDialogModule,
     MatPaginatorModule,
-    MatTooltipModule
+    MatTooltipModule,
+    HttpClientModule
   ],
-  exports:[
-    AdminLoginComponent
-  ],
+  providers: [
+    AdminService
+  ]
 })
 export class AdminModule { }

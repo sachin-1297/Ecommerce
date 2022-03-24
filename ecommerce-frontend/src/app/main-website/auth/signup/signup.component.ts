@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import {LoginComponent} from "../login/login.component"
 import {FormGroup,FormControl,FormBuilder, Validators} from '@angular/forms'
-import { AuthService } from '../services/auth.service';
+import { AuthService } from '../../services/auth.service';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';

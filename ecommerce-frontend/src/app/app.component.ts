@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
-import { AuthService } from './services/auth.service';
-import{LoginComponent} from './login/login.component';
+import { AuthService } from './main-website/services/auth.service';
+import{LoginComponent} from './main-website/auth/login/login.component';
 
 
 @Component({

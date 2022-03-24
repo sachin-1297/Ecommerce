@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup,FormControl,FormBuilder, Validators} from '@angular/forms'
-import {AuthService} from '../../services/auth.service';
 import { Router } from '@angular/router';
+import { AdminService } from '../services/admin.service';
 @Component({
   selector: 'app-admin-login',
   templateUrl: './admin-login.component.html',
@@ -16,7 +16,7 @@ export class AdminLoginComponent implements OnInit {
     Validators.minLength(8),
     Validators.maxLength(16)
   ]);
-  constructor(private _formBuilder: FormBuilder,private auth:AuthService,private router: Router) { }
+  constructor(private _formBuilder: FormBuilder,private adminSerivce:AdminService,private router: Router) { }
 
   ngOnInit(): void {
     this.adminloginForm = new FormGroup ({
@@ -26,12 +26,12 @@ export class AdminLoginComponent implements OnInit {
   }
   onSubmit(): void {
     if (this.adminloginForm.valid) {
-      this.auth.adminlogin(this.adminloginForm.value).subscribe(
+      this.adminSerivce.adminlogin(this.adminloginForm.value).subscribe(
         (result) => {
          
           console.log(result);
-          this.router.navigate(['/admin']);
-          this.auth.adminLoggedIn=true;
+          this.router.navigate(['/admin/admin-page']);
+          this.adminSerivce.adminLoggedIn=true;
         },
         (err: Error) => {
           alert(err.message);

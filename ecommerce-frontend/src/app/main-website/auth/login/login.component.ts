@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import{SignupComponent} from "../signup/signup.component"
 import {FormGroup,FormControl,FormBuilder, Validators} from '@angular/forms'
-import { AuthService } from '../services/auth.service';
+import { AuthService } from '../../services/auth.service';
 import { RouterModule, Routes } from '@angular/router';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ToolbarComponent } from '../toolbar/toolbar.component';
+import { ToolbarComponent } from '../../static/toolbar/toolbar.component';
 
 
 @Component({

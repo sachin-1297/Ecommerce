@@ -1,15 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import {AuthService} from '../../services/auth.service'
 import {MatDialog} from '@angular/material/dialog';
 import {AddProductComponent} from '../add-product/add-product.component';
-import {MatPaginator} from '@angular/material/paginator';
-import {MatTableDataSource} from '@angular/material/table';
-import { MatSort } from '@angular/material/sort';
-import {MatTable} from '@angular/material/table';
-
-
+import { AdminService } from '../services/admin.service';
 
 @Component({
   selector: 'app-admin',
@@ -17,14 +11,16 @@ import {MatTable} from '@angular/material/table';
   styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent implements OnInit {
+
   public products : any =[
     {index:1,name:'MobilePhone',category:'phone', id:12, price:111,description:'very good phone',imageUrl:'/assets/images/download (2).jpg'},
   ]
-  constructor(private auth:AuthService,private router:Router,private toastr: ToastrService,public dialog: MatDialog) { }
+
+  constructor(private router:Router,private toastr: ToastrService,public dialog: MatDialog, private adminService: AdminService) { }
 
   ngOnInit(): void {
-
   }
+  
   openDialog() {
     const dialogRef = this.dialog.open(AddProductComponent);
 
