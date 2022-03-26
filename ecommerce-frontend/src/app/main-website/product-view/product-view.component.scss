@@ -7,7 +7,7 @@
     max-width: 300px;
     border-radius: 15px;
     margin: 30px;
-    background-color: aquamarine;
+    background-color: rgb(241, 245, 244);
 
   }
 .box{
@@ -31,7 +31,7 @@ transition: 0.5s;
 .example-card:hover .box{
     transform: translate(0,-20px);
     box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-    background:linear-gradient(80deg, #2192e3, #4fea54);
+    background:linear-gradient(80deg, #f8ded4, #efffaa);
 }
 .images{
 

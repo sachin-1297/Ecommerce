@@ -28,13 +28,14 @@ export class AdminComponent implements OnInit {
       console.log(`Dialog result: ${result}`);
     });
   }
-}
-  // adminIn(){
-  //   if(this.auth.adminLoggedIn){
-  //     this.toastr.error('Please login to continue')
-  //     this.router.navigate(['/admin-login']);
-  //   }
+  adminIn(){
+      this.adminService.adminLoggedIn = false;
+      this.router.navigate(['/admin']);
 
-  // }
+
+}
+
+
+   }
 
 

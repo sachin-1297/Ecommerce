@@ -5,14 +5,14 @@ import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './auth/login/login.component';
 import { HomeComponent } from './home/home.component';
 import { CartComponent } from './cart/cart.component';
-import { ContactComponent } from './contact/contact.component';
+import { ContactComponent } from './auth/contact/contact.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { ProductViewComponent } from './product-view/product-view.component';
 import { PaymentGatewayComponent } from './payment-gateway/payment-gateway.component';
 import { SideNavComponent } from './static/side-nav/side-nav.component';
 import { ToolbarComponent } from './static/toolbar/toolbar.component';
 import { FooterComponent } from './static/footer/footer.component';
-import { AddressDiagComponent } from './address-diag/address-diag.component';
+import { AddressDiagComponent } from './dialogues/address-diag/address-diag.component';
 import { MainRoutingModule } from './main.routing.module';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -35,7 +35,7 @@ import {MatTableModule} from '@angular/material/table';
 import { MatSliderModule } from '@angular/material/slider';
 import { AuthService } from './services/auth.service';
 import { HomeService } from './services/home.service';
-
+import {CarouselModule} from 'primeng/carousel';
 
 @NgModule({
   declarations: [
@@ -75,7 +75,9 @@ import { HomeService } from './services/home.service';
     MatNativeDateModule,
     MatStepperModule,
     MatSnackBarModule,
-    MatTableModule
+    MatTableModule,
+    CarouselModule
+    
   ],
   providers: [AuthService,
   HomeService]

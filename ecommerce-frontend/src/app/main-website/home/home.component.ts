@@ -9,6 +9,8 @@ import {HomeService} from '../services/home.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+ 
+  responsiveOptions: any;
   Product_data:any[] = [
       {name:'phone',price:10,imageUrl:'/assets/images/download (2).jpg',id:'1',category:'mobile phones',description:'very good phone'},
       {name:'phone',price:11,imageUrl:'/assets/images/download (2).jpg',id:'2',category:'mobile phones',description:'very good phone'},
@@ -21,7 +23,13 @@ export class HomeComponent implements OnInit {
     ];
 
 
-  constructor(public home:HomeService) { }
+  constructor(public home:HomeService) { 
+      this.responsiveOptions = [{
+            breakpoint: '1024px',
+            numVisible: 1,
+            numScroll: 3
+        }];
+  }
 
   ngOnInit(): void {
 

@@ -25,7 +25,9 @@
     "creditcardpayments": "^1.0.3",
     "jquery": "^3.6.0",
     "ngx-toastr": "^14.2.1",
+    "p-carousel": "^1.1.2",
     "payment": "^2.4.6",
+    "primeng": "^12.0.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

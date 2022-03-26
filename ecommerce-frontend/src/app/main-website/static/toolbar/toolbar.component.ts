@@ -2,7 +2,7 @@ import { Component, Input, OnInit , ViewChild,AfterViewInit, ElementRef, HostLis
 import { MatSidenav } from '@angular/material/sidenav';
 import {MatDialog} from '@angular/material/dialog';
 import {LoginComponent} from "../../auth/login/login.component"
-import {ContactComponent} from "../../contact/contact.component"
+import {ContactComponent} from "../../auth/contact/contact.component"
 import { AuthService } from '../../services/auth.service';
 
 @Component({
