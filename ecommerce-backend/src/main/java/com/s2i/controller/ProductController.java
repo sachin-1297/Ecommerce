@@ -1,5 +1,6 @@
 package com.s2i.controller;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.s2i.entity.Product;
 import com.s2i.helper.FileUploadHelper;
 import com.s2i.services.ProductService;
@@ -11,6 +12,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.io.File;
 import java.io.IOException;
@@ -19,6 +21,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 @RestController
@@ -44,14 +47,26 @@ public class ProductController {
     }
 
     @PostMapping("/add")
-    public ResponseEntity<?> addProduct(@RequestBody Product product, @RequestParam("file")MultipartFile file) throws IOException {
+    public ResponseEntity<?> addProduct(@RequestParam("productData") String product, @RequestParam(value = "file", required = false) MultipartFile file) throws IOException {
         logger.info("Requested to add the product");
-        if (file.isEmpty()){
-            logger.info("File is empty");
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("File is Empty");
-        }
-        if (!file.getContentType().equals("image/jpeg")){
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Only JPEG content type are allowed");
+        ObjectMapper mapper = new ObjectMapper();
+        Product product1= mapper.readValue(product, Product.class);
+        try{
+            /*if (file.isEmpty()){
+                logger.info("File is empty");
+                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("File is Empty");
+            }*/
+            if (!Objects.equals(file.getContentType(), "image/*")){
+                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Only JPEG content type are allowed");
+            }
+            boolean f = fileUploadHelper.uploadFile(file);
+            if(f){
+                //return ResponseEntity.ok("File uploaded successfuly");
+                logger.info("File uploaded successfully");
+                product1.setImageUrl(ServletUriComponentsBuilder.fromCurrentContextPath().path("/img").path(file.getOriginalFilename()).toString());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
         /* else {
             product.setImageUrl(file.getOriginalFilename());
@@ -59,7 +74,7 @@ public class ProductController {
             Path path = Paths.get(saveFile.getAbsolutePath()+File.separator+file.getOriginalFilename());
             Files.copy(file.getInputStream(),path, StandardCopyOption.REPLACE_EXISTING);
         }*/
-        Product addedProduct = productService.addProduct(product);
+        Product addedProduct = productService.addProduct(product1);
         return new ResponseEntity<>( addedProduct, HttpStatus.OK);
     }
 
