@@ -2,11 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MainComponent } from './main.component';
 import { AboutComponent } from './about/about.component';
-import { LoginComponent } from './auth/login/login.component';
+
 import { HomeComponent } from './home/home.component';
 import { CartComponent } from './cart/cart.component';
-import { ContactComponent } from './auth/contact/contact.component';
-import { SignupComponent } from './auth/signup/signup.component';
+
 import { ProductViewComponent } from './product-view/product-view.component';
 import { PaymentGatewayComponent } from './payment-gateway/payment-gateway.component';
 import { SideNavComponent } from './static/side-nav/side-nav.component';
@@ -36,16 +35,13 @@ import { MatSliderModule } from '@angular/material/slider';
 import { AuthService } from './services/auth.service';
 import { HomeService } from './services/home.service';
 import {CarouselModule} from 'primeng/carousel';
-
+import {MatGridListModule} from '@angular/material/grid-list';
 @NgModule({
   declarations: [
     MainComponent,
     AboutComponent,
     HomeComponent,
     CartComponent,
-    ContactComponent,
-    LoginComponent,
-    SignupComponent,
     ProductViewComponent,
     PaymentGatewayComponent,
     SideNavComponent,
@@ -76,7 +72,8 @@ import {CarouselModule} from 'primeng/carousel';
     MatStepperModule,
     MatSnackBarModule,
     MatTableModule,
-    CarouselModule
+    CarouselModule,
+    MatGridListModule
     
   ],
   providers: [AuthService,

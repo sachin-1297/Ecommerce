@@ -27,7 +27,7 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-<div class="col-xs-3 col-sm-3 col-md-3">
+<!-- <div class="col-xs-3 col-sm-3 col-md-3">
   <div class="card" >
     <p-carousel [value]="Product_data" styleClass="custom-carousel" [numVisible]="3" [numScroll]="1" [circular]="true"
       [autoplayInterval]="0" [responsiveOptions]="responsiveOptions">
@@ -43,157 +43,27 @@
       </ng-template>
     </p-carousel>
   </div>
-  </div>
+  </div> -->
 
 <div class="container" style="padding-top:50px;">
   <h1>Home Appliances</h1>
   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <div class="row">
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/download (10).jpg" class="card-img-top">
+        <div class="row" >
+          <div class="col-xs-3 col-sm-3 col-md-3 " *ngFor="let products of Product_data" style="display: flex; padding-top:10px;">
+            
+            <div class="card h-100" style="width: 18rem;">
+              <img src="{{products.imageUrl}}" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
+                <h4 class="card-title">
+                  <a routerLink="/product">{{products.name}}</a>
+                </h4>
+                <h5>Price : ${{products.price}}</h5>
+                <p class="card-text">{{products.description}}</p>
                 <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
               </div>
-            </div>
-          </div>
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/download (10).jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/download (10).jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/download (10).jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-
-      <div class="carousel-item">
-        <div class="row">
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/recliner.jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/recliner.jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/recliner.jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/recliner.jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="carousel-item">
-        <div class="row">
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/dining.jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/dining.jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/dining.jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/dining.jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
-              </div>
             </div>
           </div>
         </div>
@@ -201,155 +71,488 @@
     </div>
   </div>
 
-</div>
-<div class="container" style="padding-top:50px;">
-  <h1>Games Gadget</h1>
-  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+  <div class="container" style="padding-top:50px;">
+    <h1>Games Gadget</h1>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
 
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/images/ps5.jpeg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/images/ps5.jpeg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/images/ps5.jpeg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/images/ps5.jpeg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/images/controller.jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/images/controller.jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/images/controller.jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/images/controller.jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/images/images (11).jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/images/images (11).jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/images/images (11).jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/images/images (11).jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="padding-top:50px;">
+    <h1>Monitors</h1>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/images/images (5).jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/images/images (5).jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/images/images (5).jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/images/images (5).jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/images/images (6).jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/images/images (6).jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/images/images (6).jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/images/images (6).jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/images/dell.jpeg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/images/dell.jpeg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/images/dell.jpeg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/images/dell.jpeg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="padding-top:50px;">
     <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="row">
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/ps5.jpeg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="/assets/images/watch.jpg" class="d-block w-100">
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="/assets/images/furnitures.jpg" class="d-block w-100">
+      </div>
+      <div class="carousel-item">
+        <img src="/assets/images/clothes.jpg" class="d-block w-100">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <div class="container" style="padding-top:50px;">
+    <h1>Watches</h1>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/images/download (7).jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/ps5.jpeg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/images/download (7).jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/ps5.jpeg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/images/download (7).jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/ps5.jpeg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/images/download (7).jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
 
-      <div class="carousel-item">
-        <div class="row">
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/controller.jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/images/images (4).jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/controller.jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/images/images (4).jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/controller.jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/images/images (4).jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/controller.jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/images/images (4).jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
 
-      <div class="carousel-item">
-        <div class="row">
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/images (11).jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/images/images (3).jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/images (11).jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/images/images (3).jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/images (11).jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/images/images (3).jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/images (11).jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/images/images (3).jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+                </div>
               </div>
             </div>
           </div>
@@ -357,337 +560,3 @@
       </div>
     </div>
   </div>
-</div>
-<div class="container" style="padding-top:50px;">
-  <h1>Monitors</h1>
-  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="row">
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/images (5).jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/images (5).jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/images (5).jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/images (5).jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="carousel-item">
-        <div class="row">
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/images (6).jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/images (6).jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/images (6).jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/images (6).jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="carousel-item">
-        <div class="row">
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/dell.jpeg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/dell.jpeg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/dell.jpeg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/dell.jpeg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="padding-top:50px;">
-  <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="10000">
-      <img src="/assets/images/watch.jpg" class="d-block w-100">
-    </div>
-    <div class="carousel-item" data-bs-interval="2000">
-      <img src="/assets/images/furnitures.jpg" class="d-block w-100">
-    </div>
-    <div class="carousel-item">
-      <img src="/assets/images/clothes.jpg" class="d-block w-100">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-<div class="container" style="padding-top:50px;">
-  <h1>Watches</h1>
-  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="row">
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/download (7).jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/download (7).jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/download (7).jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/download (7).jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="carousel-item">
-        <div class="row">
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/images (4).jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/images (4).jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/images (4).jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/images (4).jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="carousel-item">
-        <div class="row">
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/images (3).jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/images (3).jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/images (3).jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/images/images (3).jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>

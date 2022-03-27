@@ -1,48 +1,31 @@
-<ng-container class="container">
- <mat-card class="example-card">
-    <div class="box">
-      <div class="col1">
-        <mat-card-header>
-          <mat-card-title class="title">Software Solution Development</mat-card-title>
-        </mat-card-header>
+<div class="container">
+  <div class="row">
+    <mat-card class="example-card">
+      <div class="col">
+
+        <img mat-card-image src="/assets/images/download (2).jpg">
       </div>
-      <div class="col2">
-        <img mat-card-image  class="images"src="/assets/images/ssd.png">
-      </div>
-      <div class="col3">
-        <mat-card-content class="content">
+      <div class="col-md">
+        <mat-card-content>
+          <mat-card-title>Phone</mat-card-title>
           <p>
-            S2Infinitum Softech offers world class software solutions that help
-            you take your Company to the next level. We specializes in the design,
-            development and implementation of custom solutions....
-          
+            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+            bred for hunting.
           </p>
+          <button mat-raised-button>Add to Cart</button>
+          <button mat-raised-button color="primary">Buy Now</button>
+          <button mat-icon-button class="example-icon-menu" aria-label="Example icon-button with menu icon">
+
+            <span class="name">Quantity :</span>
+            <mat-select>
+              <mat-option><button mat-icon-button>1</button></mat-option>
+              <mat-option><button mat-icon-button>2</button></mat-option>
+              <mat-option><button mat-icon-button>3</button></mat-option>
+            </mat-select>
+          </button>
         </mat-card-content>
       </div>
-      <div class="col4">
-        <mat-card-actions>
-          <button type="button" class="btn btn-outline-info btn-sm">Read more</button>
-
-        </mat-card-actions>
-      </div>
-    </div>
- </mat-card>
-</ng-container>
-<div class="content-section implementation carousel-demo">
-  <div class="card">
-    <p-carousel [value]="images" styleClass="custom-carousel" [numVisible]="3" [numScroll]="1" [circular]="true"
-      [autoplayInterval]="0" [responsiveOptions]="responsiveOptions">
-      <ng-template let-image pTemplate="item">
-        <div class="item card">
-          <img src="{{image.picture}}" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">{{image.random}}</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </ng-template>
-    </p-carousel>
+    </mat-card>
   </div>
 </div>

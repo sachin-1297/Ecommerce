@@ -2,86 +2,12 @@
 
 .example-card {
     position: relative;
-    width: 350px;
-    height: 350px;
-    max-width: 300px;
+    max-width: 400px;
     border-radius: 15px;
     margin: 30px;
     background-color: rgb(241, 245, 244);
 
-  }
-.box{
-position: absolute;
-top: 20px;
-left: 20px;
-right: 20px;
-bottom: 20px;
-background:#ebf5fc;
-box-shadow:0 10px 20px rgba(0,0,0,100%);
-border-radius:15px;
-display: flex;
-justify-content: center;
-align-items: center;
-transition: 0.5s;
 }
-.content{
-    padding: 20px;
-    text-align: center;
-}
-.example-card:hover .box{
-    transform: translate(0,-20px);
-    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-    background:linear-gradient(80deg, #f8ded4, #efffaa);
-}
-.images{
-
-    width:69px;
-}
-.content p{
-    font-size: 1em;
-    font-weight: 300;
-    color:rgb(8, 8, 8);
-    z-index: 1;
-    transition: 0.5s;
-    width: 215px;
-
-}
-.title{
-    font-weight:500;
-    color:rgb(8, 8, 8);
-    z-index:-1;
-    transition:0.5s;
-
-    width: 284px;
-
-    font-size: 18px;
-}
-
-.btn-outline-info{
-    width: 100px;
-
-} 
-.col1{
-    margin-left: -91px;
-    margin-right: 0px;
-    margin-top: -80px;
-
-}
-.col2{
-    margin-left: -186px;
-    margin-right: -18px;
-    margin-top: -196px;
-}
-.col3{
-    margin-left: -122px;
-    margin-right: 280px;
-    margin-bottom: -103px;
-}
-.col4{
-    margin-left: -449px;
-    margin-right: 0px;
-    margin-bottom: -277px;
-}
-.card:hover .box .title{
-    color: rgba(0,0,0,0.5);
+mat-card-content{
+    margin-left: 1px;
 }
