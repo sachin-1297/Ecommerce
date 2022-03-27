@@ -4,12 +4,14 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.s2i.entity.Product;
 import com.s2i.helper.FileUploadHelper;
 import com.s2i.services.ProductService;
+import com.sun.org.apache.xpath.internal.objects.XObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -51,14 +53,14 @@ public class ProductController {
         logger.info("Requested to add the product");
         ObjectMapper mapper = new ObjectMapper();
         Product product1= mapper.readValue(product, Product.class);
-        try{
-            /*if (file.isEmpty()){
+        /*try{
+            *//*if (file.isEmpty()){
                 logger.info("File is empty");
                 return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("File is Empty");
-            }*/
-            if (!Objects.equals(file.getContentType(), "image/*")){
+            }*//*
+           *//* if (!Objects.equals(file.getContentType(), "image/*")){
                 return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Only JPEG content type are allowed");
-            }
+            }*//*
             boolean f = fileUploadHelper.uploadFile(file);
             if(f){
                 //return ResponseEntity.ok("File uploaded successfuly");
@@ -67,14 +69,18 @@ public class ProductController {
             }
         } catch (Exception e) {
             e.printStackTrace();
-        }
-        /* else {
-            product.setImageUrl(file.getOriginalFilename());
-            File saveFile = new ClassPathResource("static/img").getFile();
-            Path path = Paths.get(saveFile.getAbsolutePath()+File.separator+file.getOriginalFilename());
-            Files.copy(file.getInputStream(),path, StandardCopyOption.REPLACE_EXISTING);
         }*/
+        if(ObjectUtils.isEmpty(file)) {
+        }
+        else {
+
+            File saveFile = new ClassPathResource("static/image").getFile();
+            Path path = Paths.get(saveFile.getAbsolutePath() + File.separator + file.getOriginalFilename());
+            product1.setImageUrl(path.toString());
+            Files.copy(file.getInputStream(), path, StandardCopyOption.REPLACE_EXISTING);
+        }
         Product addedProduct = productService.addProduct(product1);
+        logger.info("Product added successfully");
         return new ResponseEntity<>( addedProduct, HttpStatus.OK);
     }
 

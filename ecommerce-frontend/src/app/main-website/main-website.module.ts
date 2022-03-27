@@ -13,29 +13,28 @@ import { ToolbarComponent } from './static/toolbar/toolbar.component';
 import { FooterComponent } from './static/footer/footer.component';
 import { AddressDiagComponent } from './dialogues/address-diag/address-diag.component';
 import { MainRoutingModule } from './main.routing.module';
-import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatInputModule} from '@angular/material/input';
-import {MatTooltipModule} from '@angular/material/tooltip';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatInputModule } from '@angular/material/input';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatDialogModule } from '@angular/material/dialog';
 import { ReactiveFormsModule } from '@angular/forms';
-import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
 import { MatNativeDateModule } from '@angular/material/core';
-import {MatSelectModule} from '@angular/material/select';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatStepperModule} from '@angular/material/stepper';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
-import {MatTableModule} from '@angular/material/table';
+import { MatSelectModule } from '@angular/material/select';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTableModule } from '@angular/material/table';
 import { MatSliderModule } from '@angular/material/slider';
 import { AuthService } from './services/auth.service';
 import { HomeService } from './services/home.service';
-import {CarouselModule} from 'primeng/carousel';
-import {MatGridListModule} from '@angular/material/grid-list';
+import { MatGridListModule } from '@angular/material/grid-list';
 @NgModule({
   declarations: [
     MainComponent,
@@ -46,7 +45,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
     PaymentGatewayComponent,
     SideNavComponent,
     ToolbarComponent,
-    FooterComponent,  
+    FooterComponent,
     AddressDiagComponent
   ],
   imports: [
@@ -72,11 +71,10 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatStepperModule,
     MatSnackBarModule,
     MatTableModule,
-    CarouselModule,
     MatGridListModule
-    
+
   ],
   providers: [AuthService,
-  HomeService]
+    HomeService]
 })
 export class MainWebsiteModule { }
