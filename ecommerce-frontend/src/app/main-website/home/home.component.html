@@ -50,16 +50,17 @@
   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <div class="row" >
-          <div class="col-xs-3 col-sm-3 col-md-3 " *ngFor="let products of Product_data" style="display: flex; padding-top:10px;">
-            
+        <div class="row">
+          <div class="col-xs-3 col-sm-3 col-md-3 " *ngFor="let products of Product_data"
+            style="display: flex; padding-top:10px;">
+
             <div class="card h-100" style="width: 18rem;">
               <img src="{{products.imageUrl}}" class="card-img-top" alt="...">
               <div class="card-body">
                 <h4 class="card-title">
                   <a routerLink="/product">{{products.name}}</a>
                 </h4>
-                <h5>Price : ${{products.price}}</h5>
+                <h5>Price : &#8377; {{products.price}}</h5>
                 <p class="card-text">{{products.description}}</p>
                 <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
               </div>

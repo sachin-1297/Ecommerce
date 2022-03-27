@@ -40,7 +40,7 @@ export class AddProductComponent implements OnInit {
       reader.onload = (event:any)=>{
         this.url = event.target.result;
       } */
-      this.file = e.target.files;
+      this.file = e.target.files[0];
     }
   }
 
