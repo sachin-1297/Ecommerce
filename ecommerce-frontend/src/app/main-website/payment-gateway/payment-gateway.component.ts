@@ -9,6 +9,11 @@ import {AddressDiagComponent} from '../dialogues/address-diag/address-diag.compo
 })
 export class PaymentGatewayComponent implements OnInit {
 
+  checked = false;
+  public products : any = [
+
+  ];
+
   constructor(public dialog: MatDialog) { 
     render(
       {
@@ -26,6 +31,26 @@ export class PaymentGatewayComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.itemsCart();
+    this.grandTotal();
+  }
+  itemsCart(){
+    var count = localStorage.getItem('product');
+    console.log(count);
+    if (count != null){
+      this.products = JSON.parse(count);
+     
+    }
+  }
+  totalPrice :number = 0;
+
+  grandTotal(){
+    if(localStorage.getItem('product')){
+      this.products = JSON.parse(localStorage.getItem('product') || '{}');
+      this.totalPrice = this.products.reduce(function(acc: any,val: any){
+        return acc + (val.price * val.quantity);
+      },0)
+    }
   }
 
 }

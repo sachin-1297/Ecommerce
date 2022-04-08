@@ -4,6 +4,7 @@ import {MatDialog} from '@angular/material/dialog';
 import {LoginComponent} from "../../auth/login/login.component"
 import {ContactComponent} from "../../auth/contact/contact.component"
 import { AuthService } from '../../services/auth.service';
+import {CartService} from '../../services/cart.service';
 
 @Component({
   selector: 'app-toolbar',
@@ -18,25 +19,35 @@ export class ToolbarComponent implements OnInit {
   sticky = false;
   menuPosition: any;
   elementPosition: any;
-  constructor(public dialog: MatDialog,private auth:AuthService) {
+  cartItem :number = 0;
+
+  constructor(public dialog: MatDialog,private auth:AuthService,private cartservice:CartService) {
   
    
     this.auth.userName.subscribe(res=>{
       this.userName = res;
       if(res){
         this.isLoggedIn =true;
-      }else{
+      }
+      else{
         this.isLoggedIn = false;
       }
-    })
+    });
+    
+    this.cartservice.cartSub.subscribe((data)=>{
+      this.cartItem = data;
+    });
+
    }
 
   ngOnInit(): void {
-  
+      this.cartProducts();
   }
+
   ngAfterViewInit(){
     
   }
+
   @HostListener('window:scroll', ['$event'])
     handleScroll(){
       const windowScroll = window.pageYOffset;
@@ -46,6 +57,7 @@ export class ToolbarComponent implements OnInit {
         this.sticky = false;
       }
     }
+
   openDialog() {
     const dialogRef = this.dialog.open(LoginComponent);
 
@@ -55,6 +67,7 @@ export class ToolbarComponent implements OnInit {
     });
 
 }
+
 openDialogs() {
   const dialogRef = this.dialog.open(ContactComponent);
 
@@ -63,7 +76,19 @@ openDialogs() {
   });
 
 }
+
 logout(){
   this.isLoggedIn = false;
 }
+
+cartProducts(){
+  var cartitem = localStorage.getItem('product');
+  if(cartitem != null){
+    var cartCount = JSON.parse(cartitem);
+    console.log(cartCount);
+    this.cartItem = cartCount.length;
+   
+  }
+}
+
 }

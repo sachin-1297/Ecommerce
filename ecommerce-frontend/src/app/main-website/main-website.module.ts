@@ -35,6 +35,12 @@ import { MatSliderModule } from '@angular/material/slider';
 import { AuthService } from './services/auth.service';
 import { HomeService } from './services/home.service';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { NgbRatingModule} from '@ng-bootstrap/ng-bootstrap';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {MatBadgeModule} from '@angular/material/badge';
+import {MatExpansionModule} from '@angular/material/expansion';
+
+
 @NgModule({
   declarations: [
     MainComponent,
@@ -71,8 +77,11 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatStepperModule,
     MatSnackBarModule,
     MatTableModule,
-    MatGridListModule
-
+    MatGridListModule,
+    NgbRatingModule,
+    NgbModule,
+    MatBadgeModule,
+    MatExpansionModule
   ],
   providers: [AuthService,
     HomeService]

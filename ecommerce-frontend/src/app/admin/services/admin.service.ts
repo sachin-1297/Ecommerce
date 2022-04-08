@@ -7,14 +7,16 @@ import { Observable, of, throwError } from 'rxjs';
 })
 export class AdminService {
 
-  adminLoggedIn=false;
+
 
   constructor(private http:HttpClient) { }
 
   setToken(token: string): void {
     localStorage.setItem('token', token);
   }
-
+    adminLoggedIn(){
+      return !! localStorage.getItem('token')
+    }
   adminlogin({ username, password }: any): Observable<any> {
     if (username === 'admin' && password === 'admin123') {
       this.setToken('abcdefghijklmnopqrstuvwxyz');
@@ -29,6 +31,9 @@ export class AdminService {
 
   updateProduct(product_data:any){
     return this.http.put("http://localhost:8081/update",product_data)
+  }
+  logout(){
+    localStorage.clear()
   }
   
 }

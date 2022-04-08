@@ -31,7 +31,7 @@ export class AdminLoginComponent implements OnInit {
          
           console.log(result);
           this.router.navigate(['/admin/admin-page']);
-          this.adminSerivce.adminLoggedIn=true;
+
         },
         (err: Error) => {
           alert(err.message);

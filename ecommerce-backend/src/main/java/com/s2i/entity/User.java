@@ -1,6 +1,6 @@
 package com.s2i.entity;
 
-import com.sun.org.apache.xpath.internal.objects.XString;
+
 import net.bytebuddy.implementation.bind.MethodDelegationBinder;
 
 import javax.persistence.*;

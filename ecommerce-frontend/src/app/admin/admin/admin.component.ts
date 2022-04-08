@@ -29,7 +29,7 @@ export class AdminComponent implements OnInit {
     });
   }
   adminIn(){
-      this.adminService.adminLoggedIn = false;
+      this.adminService.logout();
       this.router.navigate(['/admin']);
 
 

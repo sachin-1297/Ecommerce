@@ -18,6 +18,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { AdminService } from './services/admin.service';
 import { HttpClientModule } from '@angular/common/http';
+import { GuardGuard } from './services/guard.guard';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
   ],
   providers: [
-    AdminService
+    AdminService,
+    GuardGuard
   ]
 })
 export class AdminModule { }

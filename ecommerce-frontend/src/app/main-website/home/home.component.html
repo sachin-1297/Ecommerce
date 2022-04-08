@@ -62,7 +62,31 @@
                 </h4>
                 <h5>Price : &#8377; {{products.price}}</h5>
                 <p class="card-text">{{products.description}}</p>
-                <a href="#" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+                <!-- <div *ngIf=" this.clicked">
+                  <button mat-mini-fab color="basic" class="add" (click)="add(products)"
+                    aria-label="Example icon button with a menu icon">
+                    <mat-icon>add</mat-icon>
+                  </button>
+                  {{products.quantity}}
+                  <button mat-mini-fab color="basic" class="remove" (click)="remove(products)"
+                    aria-label="Example icon button with a menu icon">
+                    <mat-icon>remove</mat-icon>
+                  </button>
+                </div>
+              *ngIf="! this.clicked" (click)="onClick(products.id)" -->
+              <form [formGroup]="productQuantity">
+                <button class="btn btn-outline-dark btn-sm" [disabled] ="productQuantity.invalid" (click)="add(products)">Add to
+                  Cart</button>
+                <mat-form-field appearance="fill" style="width: 50px; margin-left:30px;">
+                  <mat-label>Qty:</mat-label>
+                  <select matNativeControl required formControlName="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    
+                  </select>
+                </mat-form-field>
+                </form>
               </div>
 
             </div>
@@ -71,6 +95,30 @@
       </div>
     </div>
   </div>
+  <!-- 
+  <div class="container">
+    <div class="row">
+      <div class=" col-12 col-sm-6 col-md-4 col-lg-3 ">
+        <ngb-carousel *ngIf="Product_data">
+          <ng-template ngbSlide *ngFor="let products of Product_data">
+  
+            <div class="card h-100" style="width: 18rem;">
+              <img src="{{products.imageUrl}}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a routerLink="/product">{{products.name}}</a>
+                </h4>
+                <h5>Price : &#8377; {{products.price}}</h5>
+                <p class="card-text">{{products.description}}</p>
+                <a routerLink="/cart" (click)="onClick(products)" class="btn btn-outline-dark btn-sm">Add to Cart</a>
+              </div>
+  
+            </div>
+          </ng-template>
+        </ngb-carousel>
+      </div>
+    </div>
+  </div> -->
 
   <div class="container" style="padding-top:50px;">
     <h1>Games Gadget</h1>

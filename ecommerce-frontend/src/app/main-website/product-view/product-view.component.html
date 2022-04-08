@@ -2,19 +2,28 @@
   <mat-card class="example-card">
     <div class="row">
       <div class="col-6">
-        <img mat-card-image src="/assets/images/download (2).jpg">
+        <img mat-card-image src="/assets/images/download (2).jpg" height="500">
       </div>
       <div class="col-6">
         <mat-card-content>
           <mat-card-title>Phone</mat-card-title>
+          <ngb-rating [max]="5" [(rate)]="starRating" [readonly]="true"></ngb-rating>
+          <h1>Price : &#8377; 10000</h1>
           <p>
-            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-            bred for hunting.
+            <b>Description :</b> Cool phone with cool features like <br>
+            <b>Long-lasting Usage : </b>
+            Thanks to the 5000 mAh powerful battery of the phone , you can enjoy streaming movies, grooving to music,
+            video
+            calling your friends, and much more for long hours without worrying about running out of battery power.<br>
+
+
+            <b>Super Power Saving Mode : </b>
+            This mobile phone comes with a Super Power Saving Mode that enables you to use up to 6 apps even when the
+            phone has 5%
+            battery power.
           </p>
-          <button mat-raised-button>Add to Cart</button>
-          <button mat-raised-button color="primary">Buy Now</button>
-          <button mat-icon-button class="example-icon-menu" aria-label="Example icon-button with menu icon">
+          <button mat-raised-button class="btn1" routerLink="/cart">Add to Cart</button>
+          <button mat-icon-button class="btn3" aria-label="Example icon-button with menu icon">
 
             <span class="name">Quantity :</span>
             <mat-select>
@@ -22,7 +31,9 @@
               <mat-option><button mat-icon-button>2</button></mat-option>
               <mat-option><button mat-icon-button>3</button></mat-option>
             </mat-select>
-          </button>
+          </button><br>
+          <button mat-raised-button color="primary" class="btn2">Buy Now</button>
+
         </mat-card-content>
       </div>
     </div>

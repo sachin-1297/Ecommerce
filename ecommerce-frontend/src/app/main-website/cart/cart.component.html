@@ -6,28 +6,31 @@
                     <thead>
                         <tr>
 
-                            <th>Product Name</th>
-                            <th>Price</th>
-                            <th>Product Image</th>
-                            <th>Action</th>
+                            <th style="padding-left: 20px;">Name</th>
+                            <th style="padding-left: 80px;">Price</th>
+                            <th style="padding-left: 110px;">Product Image</th>
+                            <th style="padding-left: 140px;">Quantity</th>
+                            <th style="padding-left: 170px;">Sub Total</th>
+                            <th style="padding-left: 200px;">Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr *ngFor="let items of products" >
-                            <td>{{items.Title}}</td>
-                            <td>{{items.price}}</td>
-                            <td><img style="width: 120px;" src="{{items.image}}" alt=""></td>
-                         
-                            <td>
-                                <button mat-raised-button  color="warn"  (click)="removeItem(items)" ><mat-icon>delete_forever</mat-icon></button>
+                            <td style="padding-left: 20px;">{{items.name}}</td>
+                            <td style="padding-left: 80px;">&#8377; {{items.price}}</td>
+                            <td style="padding-left: 120px;"><img style="width: 120px;" src="{{items.imageUrl}}" alt=""></td>
+                            <td style="padding-left: 150px;">{{items.quantity}}</td>
+                            <td style="padding-left: 180px;">&#8377; {{items.price * items.quantity | number}}</td>
+                            <td style="padding-left:200px;">
+                                <button mat-icon-button  color="warn"  (click)="removeItem(items.id)" ><mat-icon>delete_forever</mat-icon></button>
                             </td>
                         </tr>
                         <tr >
-                            <td colspan="4"></td>
+                            <td colspan="2"></td>
                             <td><button  class="btn btn-danger" (click)="emptycart()">Empty Cart</button></td>
                             <td><button mat-raised-button class="primary" color="primary" routerLink="/home" routerLinkActive>Shop more</button></td>
                             <td><button class="btn btn-success" routerLink="/cart/payment" routerLinkActive="active">Checkout</button></td>
-                            <td><strong class="total">Grand Total : $ {{grandTotal}}</strong></td>
+                            <td><strong class="total">Grand Total : &#8377; {{totalPrice}}</strong></td>
                         </tr>
                     </tbody>
                 </table>

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { BehaviorSubject } from 'rxjs';
+import {environment} from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -9,25 +10,28 @@ export class HomeService {
   Product: any[] = [
 
   ];
+  
   price: any[] = [
 
-  ]
-    ;
+  ];
+  quantity:any[]=[
+
+  ];
+
+  readonly APIurl = environment.apiUrl
   public productList = new BehaviorSubject<any>([]);
   constructor(private http: HttpClient) {
 
   }
 
   getItems() {
-    return this.http.get('http://localhost:8081/product/getAll');
+    return this.http.get(this.APIurl +'/product/getAll');
   }
 
-  getTotalPrice(): number {
-    let grandTotal = 0;
-    this.price.map((a: any) => {
-      grandTotal += a;
-    })
-    return grandTotal;
+  getTotalPrice(): any {
+
+
+   
   }
 
   removeCartItem(product: any) {

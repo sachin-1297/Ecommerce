@@ -4,7 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.s2i.entity.Product;
 import com.s2i.helper.FileUploadHelper;
 import com.s2i.services.ProductService;
-import com.sun.org.apache.xpath.internal.objects.XObject;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

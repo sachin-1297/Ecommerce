@@ -5,10 +5,28 @@
    // max-width: 400px;
     border-radius: 15px;
     margin: 30px;
-    background-color: rgb(241, 245, 244);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 10px 8px #888888;
     padding: 20px;
+    padding-bottom: 1px;
 
 }
 mat-card-content{
     margin-left: 1px;
+    margin-top: 100px;
+}
+ngb-rating {
+    color: #474744;
+    font-size: 30px;
+}
+.btn1{
+    margin-top: 10px;
+     width: 200px;
+}
+.btn2{
+    width: 200px;
+    margin-top: 15px;
+}
+.btn3{
+       margin-left: 30px;
 }
